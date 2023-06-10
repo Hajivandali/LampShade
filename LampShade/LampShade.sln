@@ -3,9 +3,29 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ShopManagement", "ShopManagement", "{D57C4729-7E77-40CF-8E76-18A6A8615955}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SM.Domain", "SM.Domain", "{09A8F60F-12D4-4119-92C7-626D11CFB96B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopManagement.Domain", "ShopManagement.Domain\ShopManagement.Domain.csproj", "{CF317E60-522C-4A6E-990B-29375B0BCD35}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF317E60-522C-4A6E-990B-29375B0BCD35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF317E60-522C-4A6E-990B-29375B0BCD35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF317E60-522C-4A6E-990B-29375B0BCD35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF317E60-522C-4A6E-990B-29375B0BCD35}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{09A8F60F-12D4-4119-92C7-626D11CFB96B} = {D57C4729-7E77-40CF-8E76-18A6A8615955}
+		{CF317E60-522C-4A6E-990B-29375B0BCD35} = {09A8F60F-12D4-4119-92C7-626D11CFB96B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {61C3A54B-E386-433C-B116-5F7767248707}
