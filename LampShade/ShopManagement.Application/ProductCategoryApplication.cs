@@ -1,4 +1,5 @@
-﻿using _0_Fremework.Application;
+﻿using _0_Framework.Application;
+using _0_Fremework.Application;
 using ShopManagement.Application.Contracts.ProductCategory;
 using ShopManagement.Domain.ProductCategoryAgg;
 using System;
@@ -15,28 +16,46 @@ namespace ShopManagement.Application
         public OperationResult Create(CreateProductCategory command)
         {
            var operation = new OperationResult();
-            if (_productCategoryRepository.Exists(command.Name))
+            if (_productCategoryRepository.Exists(x=>x.Name == command.Name))
                 return operation.Failed("امکان ثبت تکراری وچود ندارد");
 
-            var productcategory = new ProductCategory(command.Name,command.Description, command.Picture, command.PictureAlt,
-                command.PictureTitle, command.Keywords, command.MetaDescription,command.Slug);
+            var slug = command.Slug.Slugify();
+            var productCategory = new ProductCategory(command.Name,command.Description, command.Picture, command.PictureAlt,
+                command.PictureTitle, command.Keywords, command.MetaDescription,slug);
 
+            _productCategoryRepository.Create(productCategory);
+            _productCategoryRepository.SaveChanges();
+            return operation.Succedded();
 
         }
 
         public OperationResult Edit(EditProductCategory command)
         {
-            throw new NotImplementedException();
+            var operation= new OperationResult();
+            var productCategory = _productCategoryRepository.Get(command.Id);
+            if (productCategory != null)
+                return operation.Failed("رکورد یافت نشد ");
+            if (_productCategoryRepository.Exists(x => x.Name == command.Name && x.Id != command.Id));
+                return operation.Failed("رکورد یافت نشد");
+
+            var slug = command.Slug.Slugify();
+             
+            productCategory.Edit(command.Name, command.Description, command.Picture, command.PictureAlt,
+                command.PictureTitle, command.Keywords, command.MetaDescription, slug);
+            _productCategoryRepository.SaveChanges();
+            return operation.Succedded();
+
+
         }
 
-        public ProductCategory GetDetails(long id)
+        public EditProductCategory GetDetails(long id)
         {
-            throw new NotImplementedException();
+            return _productCategoryRepository.GetDetails(id);
         }
 
-        public List<ProductCategoryViewModel> Search(ProductCategorySearchModel searchmodel)
+        public List<ProductCategoryViewModel> Search(ProductCategorySearchModel searchModel)
         {
-            throw new NotImplementedException();
+            return _productCategoryRepository.Search(searchModel);
         }
     }
 }
