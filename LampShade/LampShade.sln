@@ -19,7 +19,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopManagement.Application"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SM.infrastructure", "SM.infrastructure", "{34ED3008-AAB0-4F85-B76A-471412201A5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopManegement.Infrastructure.EFCore", "ShopManegement.Infrastructure.EFCore\ShopManegement.Infrastructure.EFCore.csproj", "{7040CEB2-55BE-4F4A-A624-4097FCBE5762}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopManegement.Infrastructure.EFCore", "ShopManegement.Infrastructure.EFCore\ShopManegement.Infrastructure.EFCore.csproj", "{7040CEB2-55BE-4F4A-A624-4097FCBE5762}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopManagement.Configuration", "ShopManagement.Configuration\ShopManagement.Configuration.csproj", "{DD20FBD9-DAB6-4623-9301-3E39876EE634}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceHost", "ServiceHost\ServiceHost.csproj", "{4ABCC057-96FD-4FF5-9CA2-24D9C20F60B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +51,14 @@ Global
 		{7040CEB2-55BE-4F4A-A624-4097FCBE5762}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7040CEB2-55BE-4F4A-A624-4097FCBE5762}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7040CEB2-55BE-4F4A-A624-4097FCBE5762}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD20FBD9-DAB6-4623-9301-3E39876EE634}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD20FBD9-DAB6-4623-9301-3E39876EE634}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD20FBD9-DAB6-4623-9301-3E39876EE634}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD20FBD9-DAB6-4623-9301-3E39876EE634}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4ABCC057-96FD-4FF5-9CA2-24D9C20F60B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ABCC057-96FD-4FF5-9CA2-24D9C20F60B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ABCC057-96FD-4FF5-9CA2-24D9C20F60B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ABCC057-96FD-4FF5-9CA2-24D9C20F60B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +71,7 @@ Global
 		{78EDEC76-96E9-4DAE-906D-C4EF72C6BD77} = {6407B6C5-F9B7-4404-99BE-6F19F8847C94}
 		{34ED3008-AAB0-4F85-B76A-471412201A5C} = {D57C4729-7E77-40CF-8E76-18A6A8615955}
 		{7040CEB2-55BE-4F4A-A624-4097FCBE5762} = {34ED3008-AAB0-4F85-B76A-471412201A5C}
+		{DD20FBD9-DAB6-4623-9301-3E39876EE634} = {34ED3008-AAB0-4F85-B76A-471412201A5C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {61C3A54B-E386-433C-B116-5F7767248707}
