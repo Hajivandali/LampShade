@@ -1,9 +1,15 @@
+using Microsoft.EntityFrameworkCore;
+using ShopManagement.Configuration;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 
 var app = builder.Build();
+
+string connectionString = builder.Configuration.GetConnectionString("LampshadeDb");
+ShopManagementBootstrapper.Configure(builder.Services, connectionString);
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

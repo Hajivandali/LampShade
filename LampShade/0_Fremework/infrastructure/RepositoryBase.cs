@@ -1,21 +1,16 @@
 ﻿using _0_Fremework.Domain;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _0_Fremework.infrastructure
 {
-    public class RepositoryBase<TKey, T> : IRepository<TKey, T> where T :class
+    public class RepositoryBase<TKey, T> : IRepository<TKey, T> where T : class
     {
         private readonly DbContext _context;
 
         public RepositoryBase(DbContext context)
         {
-            _context =  context;
+            _context = context;
         }
 
         public void Create(T entity)
@@ -33,7 +28,7 @@ namespace _0_Fremework.infrastructure
             return _context.Set<T>().ToList();
         }
 
-        public T GetT(TKey id)
+        public T Get(TKey id)
         {
             return _context.Find<T>(id);
 

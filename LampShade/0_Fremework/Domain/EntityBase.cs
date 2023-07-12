@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _0_Fremework.Domain
+﻿namespace _0_Fremework.Domain
 {
     public class EntityBase
     {

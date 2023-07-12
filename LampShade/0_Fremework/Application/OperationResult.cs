@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _0_Fremework.Application
+﻿namespace _0_Fremework.Application
 {
     public class OperationResult
     {
@@ -14,7 +8,7 @@ namespace _0_Fremework.Application
         {
             IsSuccedded = false;
         }
-        public OperationResult Succedded(string message="عملیات با موفقیت انجام شد ")
+        public OperationResult Succedded(string message = "عملیات با موفقیت انجام شد ")
         {
             IsSuccedded = true;
             Message = message;

@@ -1,16 +1,8 @@
 ﻿using _0_Fremework.Domain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-//
-
 
 namespace ShopManagement.Domain.ProductCategoryAgg
 {
-    public class ProductCategory :EntityBase
+    public class ProductCategory : EntityBase
     {
 
         public string Name { get; private set; }
@@ -20,7 +12,7 @@ namespace ShopManagement.Domain.ProductCategoryAgg
         public string PictureTitle { get; private set; }
         public string Keywords { get; private set; }
         public string MetaDescription { get; private set; }
-        public string Slug{ get; private set; }
+        public string Slug { get; private set; }
 
         public ProductCategory(string name, string description, string picture, string pictureAlt,
             string pictureTitle, string keywords, string metaDescription, string slug)

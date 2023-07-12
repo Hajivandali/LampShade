@@ -5,17 +5,12 @@ using ShopManagement.Application.Contracts.ProductCategory;
 using ShopManagement.Domain.ProductCategoryAgg;
 using ShopManegement.Infrastructure.EFCore;
 using ShopManegement.Infrastructure.EFCore.Repository;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShopManagement.Configuration
 {
     public class ShopManagementBootstrapper
     {
-        public static void Configure(IServiceCollection service ,string connectionString)
+        public static void Configure(IServiceCollection service, string connectionString)
         {
             service.AddTransient<IProductCategoryApplication, ProductCategoryApplication>();
             service.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();

@@ -6,4 +6,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ShopManagement.Configuration\ShopManagement.Configuration.csproj" />
+    <ProjectReference Include="..\ShopManegement.Infrastructure.EFCore\ShopManegement.Infrastructure.EFCore.csproj" />
+  </ItemGroup>
+
 </Project>
