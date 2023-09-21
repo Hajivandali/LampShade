@@ -10,13 +10,13 @@ namespace ShopManagement.Configuration
 {
     public class ShopManagementBootstrapper
     {
-        public static void Configure(IServiceCollection service, string connectionString)
+        public static void Configure(IServiceCollection services, string connectionString)
         {
-            service.AddTransient<IProductCategoryApplication, ProductCategoryApplication>();
-            service.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
+            services.AddTransient<IProductCategoryApplication, ProductCategoryApplication>();
+            services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
 
 
-            service.AddDbContext<ShopContext>(x => x.UseSqlServer(connectionString));
+            services.AddDbContext<ShopContext>(x => x.UseSqlServer(connectionString));
         }
 
     }

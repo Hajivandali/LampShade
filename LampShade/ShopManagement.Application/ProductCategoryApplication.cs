@@ -8,6 +8,12 @@ namespace ShopManagement.Application
     public class ProductCategoryApplication : IProductCategoryApplication
     {
         private readonly IProductCategoryRepository _productCategoryRepository;
+
+        public ProductCategoryApplication(IProductCategoryRepository productCategoryRepository)
+        {
+            _productCategoryRepository = productCategoryRepository;
+        }
+
         public OperationResult Create(CreateProductCategory command)
         {
             var operation = new OperationResult();
